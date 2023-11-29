@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+import "proto/basic/user.proto";
+
+option go_package = "my-protobuf/protogen/basic";
+
+message UserGroup {
+  uint32 group_id = 1 [json_name="group_id"];
+  string group_name = 2 [json_name="group_name"];
+  repeated string role = 3;
+  repeated User user = 4;
+  string description = 16;
+}

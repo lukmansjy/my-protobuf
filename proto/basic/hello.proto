@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+option go_package = "my-protobuf/protogen/basic";
+
+message Hello {
+  string name = 1;
+}
+
+// $Env:GOOS = "windows"; $Env:GOARCH = "amd64";
+// protoc --go_out=. ./proto/basic/*.proto
+// protoc --go_opt=module=my-protobuf --go_out=. ./proto/basic/*.proto
+
+// go mod tidy
+// go mod vendor
